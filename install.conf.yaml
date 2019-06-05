@@ -1,0 +1,16 @@
+- defaults:
+    link:
+      relink: true
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+  
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zlogin: zsh/zlogin
+    ~/.zlogout: zsh/zlogout
+    ~/.zprofile: zsh/zprofile
+    ~/.zshenv: zsh/zshenv
+    ~/.zprezto: dependencies/prezto
+  
