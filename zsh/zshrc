@@ -18,6 +18,11 @@ then
   source "/etc/grc.zsh"
 fi
 
+if [[ -s "$HOME/.dotfiles/dependencies/z.lua/z.lua" ]];
+then
+  eval "$(lua $HOME/.dotfiles/dependencies/z.lua/z.lua --init zsh enhanced)"
+fi
+
 
 # Customize to your needs...
 
