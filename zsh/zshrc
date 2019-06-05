@@ -10,6 +10,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+if [[ -s "/usr/local/etc/grc.zsh" ]]; 
+then
+  source "/usr/local/etc/grc.zsh"
+elif [[ -s "/etc/grc.zsh" ]];
+then
+  source "/etc/grc.zsh"
+fi
+
+
 # Customize to your needs...
 
 DEFAULT_USER='nwykes'
