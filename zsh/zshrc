@@ -23,25 +23,14 @@ then
   eval "$(lua $HOME/.dotfiles/dependencies/z.lua/z.lua --init zsh enhanced)"
 fi
 
-
-# Customize to your needs...
-
-DEFAULT_USER='nwykes'
-POWERLEVEL9K_MODE='nerdfont-complete'
-POWERLEVEL9K_VCS_GIT_ICON=' '
-POWERLEVEL9K_DIR_HOME_FOREGROUND='07'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='07'
-POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='07'
-POWERLEVEL9K_DIR_ETC_FOREGROUND='07'
-POWERLEVEL9K_DIR_HOME_BACKGROUND='grey23'
-POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='grey23'
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='grey23'
-POWERLEVEL9K_DIR_ETC_BACKGROUND='grey23'
-POWERLEVEL9K_DIR_PATH_HIGHLIGHT_BOLD=true
-POWERLEVEL9K_DIR_PATH_HIGHLIGHT_FOREGROUND='07'
-POWERLEVEL9K_OS_ICON_BACKGROUND='04'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(root_indicator os_icon context dir dir_writable vcs)
-
 if type "neofetch" > /dev/null 2>&1; then
   neofetch
 fi
+
+if [[ -s "$HOME/.dotfiles/dependencies/powerlevel10k/powerlevel10k.zsh-theme" ]];
+then
+  source "$HOME/.dotfiles/dependencies/powerlevel10k/powerlevel10k.zsh-theme"
+fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

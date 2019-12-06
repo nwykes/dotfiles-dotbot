@@ -7,3 +7,6 @@
 [submodule "dependencies/z.lua"]
 	path = dependencies/z.lua
 	url = https://github.com/skywind3000/z.lua
+[submodule "dependencies/powerlevel10k"]
+	path = dependencies/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git

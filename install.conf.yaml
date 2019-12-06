@@ -13,4 +13,5 @@
     ~/.zprofile: zsh/zprofile
     ~/.zshenv: zsh/zshenv
     ~/.zprezto: dependencies/prezto
+    ~/.p10k.zsh: zsh/p10k.zsh
   
