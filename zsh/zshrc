@@ -10,6 +10,15 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+case "$OSTYPE" in
+  darwin*)
+    export CLICOLOR_FORCE=1
+  ;;
+  linux*)
+    alias ls='ls --color -C'
+  ;;
+esac
+
 if [[ -s "/usr/local/etc/grc.zsh" ]]; 
 then
   source "/usr/local/etc/grc.zsh"
